@@ -1,0 +1,12 @@
+alias cls="clear"
+alias logoff='sudo pkill -KILL -u $USER'
+alias news='curl getnews.tech'
+alias hownews='echo curl getnews.tech/:help'
+alias cat=bat
+alias clock=tty-clock
+alias f='clear;fastfetch --config examples/13'
+alias clima="curl wttr.in"
+alias gf="clear;onefetch"
+alias update="/home/nin/.update.sh"
+
+eval "$(zoxide init zsh)"

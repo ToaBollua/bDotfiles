@@ -36,16 +36,22 @@ update_package_manager() {
     fi
 }
 
-# Actualización de paquetes de Pacman
-update_package_manager "Pacman" "sudo pacman -Scc --noconfirm && sudo pacman -Syu --noconfirm" "¿Quieres actualizar los paquetes de Pacman?"
+#   Actualiza los distintos gestores de paquetes.
+#   Comenta o descomenta los gestores de paquetes
+#   que uses en tu sistema.
 
-# Actualización de paquetes de Yay
-update_package_manager "Yay" "yay -Scc --noconfirm && yay -Syu --noconfirm" "¿Quieres actualizar los paquetes de Yay?"
+update_package_manager "Pacman" "sudo pacman -Scc --noconfirm && sudo pacman -Syu --noconfirm" "Quieres actualizar los paquetes de Pacman?"
 
-# Actualización de paquetes de Flatpak
-update_package_manager "Flatpak" "flatpak update" "¿Quieres actualizar los paquetes de Flatpak?"
+update_package_manager "Yay" "yay -Scc --noconfirm && yay -Syu --noconfirm" "Quieres actualizar los paquetes de Yay?"
 
-# Actualización de la base de datos de virus
-update_package_manager "virus" "sudo freshclam" "¿Quieres actualizar la base de datos de virus?"ClamAV
+update_package_manager "Flatpak" "flatpak update" "Quieres actualizar los paquetes de Flatpak?"
+
+update_package_manager "ClamAV" "sudo freshclam" "Quieres actualizar la base de datos de virus?"
+
+#update_package_manager "APT" "sudo apt update && sudo apt upgrade" "Quieres actualizar los paquetes de APT?"
+
+#update_package_manager "PKG" "pkg update && pkg upgrade" "Quieres actualizar los paquetes PKG?"
+
+#update_package_manager "DNF" "sudo dnf update" "Quieres actualizar los paquetes DNF?"
 
 echo "====== Toda tu mierda se actualizó ======"
